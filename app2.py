@@ -1,9 +1,10 @@
 import streamlit as st
 import pickle
 import numpy as np
+import os
+model_path = os.path.join(os.path.dirname(__file__), "model.pkl")
+model = pickle.load(open(model_path, "rb"))
 
-# Load trained model
-model = pickle.load(open("model.pkl", "rb"))
 
 st.title("Market Price Prediction App")
 st.write("Predict price per kg based on market conditions")
@@ -40,3 +41,4 @@ if st.button("Predict Price"):
     prediction = model.predict(input_data)
 
     st.success(f"Predicted Price per Kg: {prediction[0]:,.2f} TZS")
+
