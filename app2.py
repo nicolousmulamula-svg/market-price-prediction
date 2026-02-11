@@ -3,6 +3,7 @@ import pickle
 import numpy as np
 import os
 model_path = os.path.join(os.path.dirname(__file__), "model.pkl")
+
 model = pickle.load(open(model_path, "rb"))
 
 
@@ -41,4 +42,5 @@ if st.button("Predict Price"):
     prediction = model.predict(input_data)
 
     st.success(f"Predicted Price per Kg: {prediction[0]:,.2f} TZS")
+
 
