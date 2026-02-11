@@ -1,8 +1,9 @@
 streamlit
-sklearn 
+scikit-learn 
 numpy
 pandas
 pickle
 os
+
 
 
