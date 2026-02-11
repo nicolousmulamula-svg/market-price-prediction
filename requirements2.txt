@@ -1,7 +1,8 @@
 streamlit
-scikit-learn==1.3.2  
+sklearn 
 numpy
 pandas
 pickle
 os
+
 
